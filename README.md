@@ -1,164 +1,200 @@
-# 🚌 Cloud Bus Pass System
+# 🚍 Cloud Bus Pass System
 
-A web-based **Cloud Bus Pass Management System** developed as part of the **CodeAlpha Cloud Computing Internship – Task 3**.
+A full-stack web application that digitizes the bus pass application and management process. Users can register, apply for bus passes, track application status, and access digital passes, while administrators can review and manage applications.
 
-The system provides a digital platform for users to register, apply for bus passes, track application status, and allows administrators to manage and approve bus pass applications.
+🌐 **Live Demo:** https://cloudbuspasssystem.onrender.com
 
-## 📌 Project Overview
+📂 **Source Code:** https://github.com/jpugazholi/CodeAlpha-cloud-computing-Internship_Task3_CloudBusPassSystem
 
-Traditional bus pass application processes can involve manual paperwork, delays, and difficulty tracking application status.
-
-The **Cloud Bus Pass System** aims to simplify this process by providing a centralized digital platform for managing users, bus pass applications, and administrative approvals.
+---
 
 ## ✨ Features
 
 ### 👤 User Features
 
-* User registration
-* User login
-* Profile management
-* Apply for a bus pass
-* Select bus pass type and route
-* View application status
-* View submitted applications
-* Digital bus pass information
+* User registration and login
+* Secure authentication flow
+* Student / Regular bus pass application
+* Online application submission
+* Application status tracking
+* Digital bus pass
+* QR code generation
+* User profile management
 
-### 🔐 Admin Features
+### 🛠️ Admin Features
 
 * Admin login
 * Admin dashboard
-* View all bus pass applications
-* Approve applications
-* Reject applications
-* View registered users
-* Manage bus pass applications
+* View all applications
+* Approve or reject applications
+* User management
+* Application management
 
-## 🏗️ System Architecture
+---
+
+## 🏗️ Architecture
 
 ```text
-                    ┌──────────────────────┐
-                    │      User/Admin      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │    Web Frontend      │
-                    │ HTML / CSS / JS      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Spring Boot API    │
-                    │      Backend         │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │      MySQL DB        │
-                    │ Users / Applications │
-                    │    / Bus Passes      │
-                    └──────────────────────┘
+User / Admin
+     │
+     ▼
+Frontend
+HTML + CSS + JavaScript
+     │
+     │ REST API
+     ▼
+Spring Boot Backend
+     │
+     ▼
+Spring Data JPA
+     │
+     ▼
+MySQL Database
 ```
 
-## 🛠️ Technology Stack
+---
 
-### Frontend
+## 💻 Tech Stack
 
-* HTML5
-* CSS3
-* JavaScript
+| Layer           | Technologies          |
+| --------------- | --------------------- |
+| Frontend        | HTML, CSS, JavaScript |
+| Backend         | Java, Spring Boot     |
+| Data Access     | Spring Data JPA       |
+| API             | REST APIs             |
+| Database        | MySQL                 |
+| Build Tool      | Maven                 |
+| API Testing     | Postman               |
+| Version Control | Git, GitHub           |
+| Deployment      | Render                |
 
-### Backend
-
-* Java
-* Spring Boot
-* Spring Data JPA
-* REST APIs
-* Maven
-
-### Database
-
-* MySQL
-* Hibernate / JPA
-
-### Development Tools
-
-* Visual Studio Code
-* Git
-* GitHub
-* Postman
+---
 
 ## 📂 Project Structure
 
 ```text
-CodeAlpha-cloud-computing-Internship_Task3_CloudBusPassSystem/
-│
-├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── admin-login.html
-│   ├── dashboard.html
-│   ├── admin-dashboard.html
-│   ├── style.css
-│   └── script.js
+CloudBusPassSystem/
 │
 ├── backend/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
+│   │   │   │   └── com/codealpha/cloudbuspass/
+│   │   │   │       ├── controller/
+│   │   │   │       ├── entity/
+│   │   │   │       ├── repository/
+│   │   │   │       └── service/
+│   │   │   │
 │   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   │
 │   │   └── test/
 │   │
 │   ├── pom.xml
-│   └── mvnw
+│   ├── Dockerfile
+│   ├── mvnw
+│   └── mvnw.cmd
 │
-├── .gitignore
+├── frontend/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── apply-pass.html
+│   ├── status.html
+│   ├── digitalpass.html
+│   └── admin-dashboard.html
+│
 └── README.md
 ```
 
-> File names may vary depending on the current implementation.
-
-## 🗄️ Database
-
-The application uses MySQL for storing application data.
-
-### Main Tables
-
-* `users`
-* `bus_passes`
-* `applications`
-
-### User Data
-
-Stores user registration and account information.
-
-### Bus Pass Data
-
-Stores bus pass type, route, and amount details.
-
-### Application Data
-
-Stores bus pass applications, users, and application status.
+---
 
 ## 🔄 Application Workflow
 
+### User Workflow
+
 ```text
-User Registration
-       ↓
-User Login
-       ↓
+Register
+   ↓
+Login
+   ↓
 Apply for Bus Pass
-       ↓
+   ↓
 Application Submitted
-       ↓
-Admin Reviews Application
-       ↓
-Approve / Reject
-       ↓
-User Checks Application Status
+   ↓
+Admin Review
+   ↓
+Approved / Rejected
+   ↓
+Track Status
+   ↓
+View Digital Pass
 ```
 
-## 🚀 Running the Project Locally
+### Admin Workflow
+
+```text
+Admin Login
+     ↓
+Admin Dashboard
+     ↓
+View Applications
+     ↓
+Review Application
+     ↓
+Approve / Reject
+     ↓
+Manage Users
+```
+
+---
+
+## 🗄️ Database
+
+The application uses **MySQL** for persistent data storage.
+
+### Main Entities
+
+* `User`
+* `BusPass`
+* `Application`
+
+Spring Data JPA is used for database access and repository operations.
+
+---
+
+## 🔐 Configuration & Security
+
+**Do not commit real passwords, API keys, tokens, or other secrets to GitHub.**
+
+For local development, configure database credentials through environment variables or a local configuration file.
+
+Example:
+
+```properties
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
+
+Example environment variables:
+
+```text
+DB_URL=jdbc:mysql://localhost:3306/your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+> Replace these placeholder values only in your local environment or deployment environment. Never put real credentials in this README or public source code.
+
+---
+
+## 🚀 Run Locally
 
 ### 1. Clone the Repository
 
@@ -166,105 +202,115 @@ User Checks Application Status
 git clone https://github.com/jpugazholi/CodeAlpha-cloud-computing-Internship_Task3_CloudBusPassSystem.git
 ```
 
-### 2. Open the Project
-
 ```bash
 cd CodeAlpha-cloud-computing-Internship_Task3_CloudBusPassSystem
 ```
 
-### 3. Configure MySQL
+### 2. Configure Database
 
-Create a MySQL database:
-
-```sql
-CREATE DATABASE buspass_db;
-```
-
-Update the database configuration in:
+Create a MySQL database and configure the required environment variables:
 
 ```text
-backend/src/main/resources/application.properties
+DB_URL
+DB_USERNAME
+DB_PASSWORD
 ```
 
-Use your own local database credentials.
+### 3. Start Backend
 
-### 4. Start the Spring Boot Backend
+On Windows:
 
-Windows:
-
-```cmd
+```bash
 cd backend
 mvnw.cmd spring-boot:run
 ```
 
-The backend runs on:
+Or with Maven installed:
 
-```text
-http://localhost:8080
+```bash
+mvn spring-boot:run
 ```
 
-### 5. Run the Frontend
+### 4. Start Frontend
 
-Open the `frontend` folder using **VS Code Live Server** or another local web server.
-
-## 🧪 Testing
-
-The application has been tested locally for:
-
-* User registration
-* User login
-* Bus pass application
-* Application status retrieval
-* Admin login
-* Admin application management
-* MySQL database operations
-* Frontend-backend communication
-
-## ☁️ Cloud Deployment
-
-Cloud deployment is currently **in progress**.
-
-The planned deployment architecture is:
-
-```text
-Frontend
-   ↓
-Cloud Hosting
-   ↓
-Spring Boot Backend
-   ↓
-Cloud MySQL Database
-```
-
-The project will be further configured for cloud deployment as part of the CodeAlpha Cloud Computing Internship.
-
-## 🎯 Internship Task
-
-**Organization:** CodeAlpha
-**Internship:** Cloud Computing Internship
-**Task:** Task 3 – Cloud Bus Pass System
-
-This project is being developed to gain practical experience in:
-
-* Cloud Computing
-* Backend Development
-* REST API Development
-* Database Management
-* Web Application Development
-* Git & GitHub
-* Cloud Deployment
-
-## 👨‍💻 Author
-
-**Pugazholi J**
-
-B.Tech Information Technology Student
-Java | Spring Boot | Backend Development | DSA
-
-## 📄 License
-
-This project was developed for educational and internship purposes.
+Open the `frontend` folder using a local development server such as **VS Code Live Server**.
 
 ---
 
-⭐ If you find this project useful, consider giving the repository a star!
+## 🌐 Deployment
+
+The application is deployed on **Render**.
+
+### Live Application
+
+https://cloudbuspasssystem.onrender.com
+
+The deployment connects the frontend, Spring Boot backend, and database to provide a cloud-hosted application.
+
+---
+
+## 🧪 API Testing
+
+REST APIs can be tested using **Postman**.
+
+The backend provides API endpoints for:
+
+* User management
+* Authentication
+* Bus pass management
+* Application management
+
+---
+
+## 🎯 Objectives
+
+* Digitize the traditional bus pass application process
+* Reduce manual paperwork
+* Allow users to apply online
+* Provide application status tracking
+* Generate digital bus passes
+* Help administrators manage applications efficiently
+* Gain practical experience in full-stack and cloud deployment
+
+---
+
+## 📚 CodeAlpha Internship
+
+This project was developed as part of the **CodeAlpha Cloud Computing Internship – Task 3**.
+
+Through this project, I gained practical experience in:
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* REST API development
+* MySQL
+* Frontend development
+* Git & GitHub
+* Cloud deployment
+
+---
+
+## 👨‍💻 Developer
+
+### Pugazholi J
+
+**B.Tech Information Technology Student**
+
+GitHub:
+https://github.com/jpugazholi
+
+LinkedIn:
+https://www.linkedin.com/in/pugazholi-j-849045360/
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+---
+
+## 📌 Note
+
+This project was created for learning and internship purposes as part of the **CodeAlpha Cloud Computing Internship**.
