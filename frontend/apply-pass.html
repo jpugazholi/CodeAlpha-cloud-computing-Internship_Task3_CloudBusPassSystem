@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply Pass - Cloud Bus Pass</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>🚌</span>
+            Cloud Bus Pass
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="apply-pass.html" class="active">Apply Pass</a>
+            <a href="status.html">Status</a>
+            <a href="digitalpass.html">Digital Pass</a>
+            <a href="index.html">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= APPLY PASS ================= -->
+
+    <section class="form-section">
+
+        <div class="form-card apply-card">
+
+            <div class="form-header">
+
+                <div class="form-icon">
+                    🚌
+                </div>
+
+                <h1>Apply for Bus Pass</h1>
+
+                <p>
+                    Fill in your details to submit a bus pass application.
+                </p>
+
+            </div>
+
+
+            <form id="applyPassForm">
+
+                <!-- PASSENGER NAME -->
+
+                <div class="input-group">
+
+                    <label for="passengerName">
+                        Passenger Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="passengerName"
+                        placeholder="Enter passenger name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="passengerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="passengerEmail"
+                        placeholder="Enter email address"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="input-group">
+
+                    <label for="passengerPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="passengerPhone"
+                        placeholder="Enter 10-digit phone number"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BUS ROUTE -->
+
+                <div class="input-group">
+
+                    <label for="busRoute">
+                        Bus Route
+                    </label>
+
+                    <select id="busRoute" required>
+
+                        <option value="">
+                            Select your route
+                        </option>
+
+                        <option value="Salem to College">
+                            Salem to College
+                        </option>
+
+                        <option value="Trichy to College">
+                            Trichy to College
+                        </option>
+
+                        <option value="Namakkal to College">
+                            Namakkal to College
+                        </option>
+
+                        <option value="Erode to College">
+                            Erode to College
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PASS TYPE -->
+
+                <div class="input-group">
+
+                    <label for="passType">
+                        Pass Type
+                    </label>
+
+                    <select id="passType" required>
+
+                        <option value="">
+                            Select pass type
+                        </option>
+
+                        <option value="Student">
+                            Student Pass
+                        </option>
+
+                        <option value="Regular">
+                            Regular Pass
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="form-btn"
+                >
+                    Submit Application
+                </button>
+
+            </form>
+
+
+            <p class="form-footer">
+
+                <a href="dashboard.html">
+                    ← Back to Dashboard
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

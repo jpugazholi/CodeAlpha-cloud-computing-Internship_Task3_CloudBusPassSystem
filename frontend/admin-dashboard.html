@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Cloud Bus Pass</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>🚌</span>
+            Cloud Bus Pass - Admin
+        </div>
+
+        <nav>
+            <a href="admin-dashboard.html" class="active">
+                Applications
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= ADMIN DASHBOARD ================= -->
+
+    <main class="admin-page">
+
+        <section class="admin-header">
+
+            <div>
+
+                <p class="welcome-text">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Application Management
+                </h1>
+
+                <p>
+                    Review and manage bus pass applications.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <section class="admin-stats">
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    📋
+                </div>
+
+                <div>
+                    <span>Total Applications</span>
+                    <strong id="totalApplications">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ⏳
+                </div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingApplications">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ✅
+                </div>
+
+                <div>
+                    <span>Approved</span>
+                    <strong id="approvedApplications">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ❌
+                </div>
+
+                <div>
+                    <span>Rejected</span>
+                    <strong id="rejectedApplications">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATION TABLE ================= -->
+
+        <section class="applications-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Bus Pass Applications
+                </h2>
+
+                <p>
+                    Review applications and update their status.
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Passenger</th>
+
+                            <th>Email</th>
+
+                            <th>Phone</th>
+
+                            <th>Route</th>
+
+                            <th>Pass Type</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="applicationTableBody">
+
+                        <tr>
+
+                            <td colspan="8">
+                                Loading applications...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+.logo span {
+    font-size: 27px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #475569;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #2563eb;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 620px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(59, 130, 246, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(99, 102, 241, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #eef2ff
+        );
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 7%;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* ================= HERO TEXT ================= */
+
+.hero-text {
+    max-width: 600px;
+}
+
+.welcome-text {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+
+    line-height: 1.15;
+
+    color: #0f172a;
+
+    margin-bottom: 22px;
+}
+
+.hero-text h1 span {
+    display: block;
+
+    color: #2563eb;
+}
+
+.description {
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 540px;
+
+    margin-bottom: 32px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #ffffff;
+
+    color: #2563eb;
+
+    border: 1px solid #dbeafe;
+}
+
+.secondary-btn:hover {
+    background: #eff6ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+    width: 360px;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+.bus-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+
+    font-size: 40px;
+}
+
+.hero-card h2 {
+    color: #0f172a;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.hero-card > p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= PASS PREVIEW ================= */
+
+.pass-preview {
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    text-align: left;
+}
+
+.pass-preview div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.pass-preview small {
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.pass-preview strong {
+    color: #334155;
+
+    font-size: 13px;
+}
+
+.pass-preview .approved {
+    color: #16a34a;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 80px 7%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.features h2 {
+    color: #0f172a;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.section-text {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 45px;
+}
+
+.feature-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+
+    font-size: 28px;
+}
+
+.feature-card h3 {
+    color: #1e293b;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 25px 7%;
+
+    background: #0f172a;
+
+    color: #94a3b8;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 45px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+    }
+}
+
+/* ================= FORM SECTION ================= */
+
+.form-section {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(59, 130, 246, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(99, 102, 241, 0.12),
+            transparent 35%
+        ),
+        #f5f7fb;
+}
+
+
+/* ================= FORM CARD ================= */
+
+.form-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.10);
+}
+
+
+/* ================= FORM HEADER ================= */
+
+.form-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.form-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+}
+
+.form-header h1 {
+    color: #0f172a;
+
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.form-header p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: #1e293b;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ================= FORM BUTTON ================= */
+
+.form-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ================= FORM FOOTER ================= */
+
+.form-footer {
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.form-footer a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= FORM RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .form-section {
+        padding: 40px 15px;
+    }
+
+    .form-card {
+        padding: 30px 22px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-page {
+    min-height: calc(100vh - 75px);
+    padding: 60px 7%;
+    background: #f5f7fb;
+}
+
+.dashboard-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.dashboard-header h1 {
+    color: #0f172a;
+    font-size: 38px;
+    margin: 5px 0 8px;
+}
+
+.dashboard-header > div > p:last-child {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ================= DASHBOARD CARDS ================= */
+
+.dashboard-cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+.dashboard-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #eff6ff;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+}
+
+.dashboard-card h2 {
+    color: #1e293b;
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    min-height: 45px;
+
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.dashboard-card a:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ================= INFO ================= */
+
+.dashboard-info {
+    max-width: 1200px;
+
+    margin: 30px auto 0;
+
+    padding: 25px 30px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 15px;
+}
+
+.dashboard-info h2 {
+    color: #1e3a8a;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.dashboard-info p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================= DASHBOARD RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .dashboard-header {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-page {
+        padding: 40px 5%;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ================= SELECT INPUT ================= */
+
+.input-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: #1e293b;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.input-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ================= APPLY CARD ================= */
+
+.apply-card {
+    max-width: 520px;
+}
+
+
+/* ================= APPLY RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .apply-card {
+        padding: 28px 20px;
+    }
+}
+
+
+/* ================= STATUS PAGE ================= */
+
+.status-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 60px 7%;
+
+    background: #f5f7fb;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ================= STATUS HEADER ================= */
+
+.status-header {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.status-header h1 {
+    color: #0f172a;
+
+    font-size: 36px;
+
+    margin: 5px 0 8px;
+}
+
+.status-header > p:last-child {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================= STATUS CONTAINER ================= */
+
+#statusContainer {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* ================= STATUS CARD ================= */
+
+.status-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.07);
+
+    text-align: center;
+}
+
+.status-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 18px;
+
+    font-size: 32px;
+}
+
+.status-card h2 {
+    color: #1e293b;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.status-card p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= STATUS DETAILS ================= */
+
+.status-details {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.status-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.status-row:last-child {
+    border-bottom: none;
+}
+
+.status-row span:first-child {
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+.status-row span:last-child {
+    color: #1e293b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* ================= STATUS BADGES ================= */
+
+.status-badge {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+.status-approved {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.status-rejected {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.status-back {
+    margin-top: 25px;
+}
+
+.status-back a {
+    text-decoration: none;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.status-back a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .status-page {
+        padding: 40px 5%;
+    }
+
+    .status-header h1 {
+        font-size: 30px;
+    }
+
+    .status-card {
+        padding: 25px 20px;
+    }
+
+    .status-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .status-row span:last-child {
+        text-align: left;
+    }
+}
+
+
+/* ================= ADMIN PAGE ================= */
+
+.admin-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 55px 7%;
+
+    background: #f5f7fb;
+}
+
+
+/* ================= ADMIN HEADER ================= */
+
+.admin-header {
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+}
+
+.admin-header h1 {
+    color: #0f172a;
+
+    font-size: 36px;
+
+    margin: 5px 0 8px;
+}
+
+.admin-header > div > p:last-child {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================= ADMIN STATS ================= */
+
+.admin-stats {
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.admin-stat-card {
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 7px 20px rgba(15, 23, 42, 0.05);
+}
+
+.admin-stat-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 13px;
+
+    font-size: 24px;
+}
+
+.admin-stat-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+.admin-stat-card strong {
+    color: #0f172a;
+
+    font-size: 24px;
+}
+
+
+/* ================= APPLICATION SECTION ================= */
+
+.applications-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.section-title {
+    padding: 25px 28px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-title h2 {
+    color: #1e293b;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 950px;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* ================= ADMIN ACTION BUTTONS ================= */
+
+.action-btn {
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+
+.approve-btn {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.approve-btn:hover {
+    background: #bbf7d0;
+}
+
+.reject-btn {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.reject-btn:hover {
+    background: #fecaca;
+}
+
+
+/* ================= ADMIN STATUS ================= */
+
+.admin-status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.admin-status.pending {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+.admin-status.approved {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.admin-status.rejected {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+/* ================= ADMIN RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .admin-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .admin-page {
+        padding: 40px 5%;
+    }
+
+    .admin-header {
+        text-align: center;
+    }
+
+    .admin-header h1 {
+        font-size: 29px;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-stat-card {
+        padding: 18px;
+    }
+}
+
+
+/* ================= DIGITAL PASS PAGE ================= */
+
+.digital-pass-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 60px 7%;
+
+    background: #f5f7fb;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ================= DIGITAL HEADER ================= */
+
+.digital-header {
+    width: 100%;
+    max-width: 800px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.digital-header h1 {
+    color: #0f172a;
+
+    font-size: 36px;
+
+    margin: 5px 0 8px;
+}
+
+.digital-header > p:last-child {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================= DIGITAL CONTAINER ================= */
+
+#digitalPassContainer {
+    width: 100%;
+    max-width: 550px;
+}
+
+
+/* ================= DIGITAL CARD ================= */
+
+.digital-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.08);
+
+    text-align: center;
+}
+
+.digital-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 20px;
+
+    font-size: 36px;
+}
+
+.digital-card h2 {
+    color: #1e293b;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.digital-card p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= PASS DETAILS ================= */
+
+.digital-pass-details {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border-radius: 13px;
+
+    text-align: left;
+}
+
+.digital-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.digital-row:last-child {
+    border-bottom: none;
+}
+
+.digital-row span:first-child {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.digital-row span:last-child {
+    color: #1e293b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* ================= PASS ID ================= */
+
+.pass-id {
+    margin-top: 22px;
+
+    padding: 13px;
+
+    background: #eff6ff;
+
+    border: 1px dashed #93c5fd;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.pass-id span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.pass-id strong {
+    color: #1d4ed8;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= DOWNLOAD BUTTON ================= */
+
+.download-pass-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.download-pass-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= BACK ================= */
+
+.digital-back {
+    margin-top: 25px;
+}
+
+.digital-back a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.digital-back a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .digital-pass-page {
+        padding: 40px 5%;
+    }
+
+    .digital-header h1 {
+        font-size: 30px;
+    }
+
+    .digital-card {
+        padding: 25px 20px;
+    }
+
+    .digital-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .digital-row span:last-child {
+        text-align: left;
+    }
+}
