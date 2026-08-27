@@ -3,21 +3,6 @@ const API_BASE_URL =
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================================
-   ADMIN SECURITY - RUN FIRST
-========================================================= */
-
-if (
-    window.location.pathname.endsWith("admin-dashboard.html")
-) {
-    const adminLoggedIn =
-        localStorage.getItem("adminLoggedIn");
-
-    if (adminLoggedIn !== "true") {
-        window.location.href = "login.html";
-        return;
-    }
-}
 
     /* =========================================================
        API HELPER
